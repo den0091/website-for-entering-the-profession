@@ -1,52 +1,63 @@
 /*
-   ===== CSS ЗМІННІ (CSS VARIABLES) =====
+   CSS ЗМІННІ (CSS VARIABLES) - централізоване керування кольорами та розмірами
+   Це дозволяє легко змінювати зовнішній вигляд всього сайту в одному місці
 */
 :root {
-    --primary-blue: #0066cc;
-    --accent-blue: #0099ff;
-    --dark-blue: #004499;
-    --light-blue: #bbddff;
-    --tech-green: #00cc66;
-    --text-color: #f2f2f2;
-    --dark-bg: rgba(0, 0, 0, 0.85);
-    --content-bg: rgba(0, 0, 0, 0.7);
-    --table-bg: rgba(20, 20, 20, 0.9);
-    --footer-bg: rgba(10, 10, 10, 0.9);
-    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.7);
-    --shadow-md: 0 0 15px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 0 25px rgba(0, 0, 0, 0.7);
-    --glow-blue: 0px 0px 5px rgba(0, 102, 204, 0.4);
-    --glow-blue-hover: 0px 0px 8px rgba(0, 153, 255, 0.6);
-    --glow-green: 0px 0px 5px rgba(0, 204, 102, 0.4);
-    --border-radius: 15px;
-    --header-height: 110px;
-    --content-width: 85%;
-    --transition: all 0.3s ease;
-    --transition-slow: all 0.4s ease;
+    /* Основна кольорова палітра */
+    --primary-blue: #0066cc;        /* Основний синій колір */
+    --accent-blue: #0099ff;         /* Яскравий акцентний синій */
+    --dark-blue: #004499;           /* Темний синій для контрасту */
+    --light-blue: #bbddff;          /* Світлий синій для тексту */
+    --tech-green: #00cc66;          /* Технологічний зелений для акцентів */
+    --text-color: #f2f2f2;          /* Основний колір тексту */
+    
+    /* Кольори фонів */
+    --dark-bg: rgba(0, 0, 0, 0.85);          /* Темний фон */
+    --content-bg: rgba(0, 0, 0, 0.7);        /* Фон контенту */
+    --table-bg: rgba(20, 20, 20, 0.9);       /* Фон таблиць */
+    --footer-bg: rgba(10, 10, 10, 0.9);      /* Фон підвалу */
+    
+    /* Тіні та ефекти */
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.7);     /* Маленька тінь */
+    --shadow-md: 0 0 15px rgba(0, 0, 0, 0.5);       /* Середня тінь */
+    --shadow-lg: 0 0 25px rgba(0, 0, 0, 0.7);       /* Велика тінь */
+    --glow-blue: 0px 0px 5px rgba(0, 102, 204, 0.4);        /* Світіння синього */
+    --glow-blue-hover: 0px 0px 8px rgba(0, 153, 255, 0.6);  /* Світіння при наведенні */
+    --glow-green: 0px 0px 5px rgba(0, 204, 102, 0.4);      /* Світіння зеленого */
+    
+    /* Розміри та відступи */
+    --border-radius: 15px;          /* Радіус закруглення кутів */
+    --header-height: 110px;         /* Висота шапки */
+    --content-width: 85%;           /* Ширина контенту */
+    
+    /* Анімації */
+    --transition: all 0.3s ease;            /* Стандартна анімація */
+    --transition-slow: all 0.4s ease;       /* Повільна анімація */
 }
 
 /*
-   ===== ПІДКЛЮЧЕННЯ ШРИФТІВ =====
+   ПІДКЛЮЧЕННЯ ШРИФТІВ
+   Використовуємо технологічний шрифт Orbitron
 */
 @font-face {
     font-family: 'Tech Font';
     src: url('fonts/Orbitron-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: swap; /* Шрифт відображається моментально, поки завантажується */
 }
 
 /*
-   ===== БАЗОВІ СТИЛІ =====
+   БАЗОВІ СТИЛІ - скидаємо стандартні стилі браузера та задаємо основні
 */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Паддинги і бордери включаються в загальну ширину */
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Плавна прокрутка при кліку на якорні посилання */
     font-size: 16px;
 }
 
@@ -54,35 +65,35 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
-    font-family: 'Tech Font', 'Courier New', monospace;
+    font-family: 'Tech Font', 'Courier New', monospace; /* Каскад шрифтів */
     text-align: center;
-    letter-spacing: 0.05em;
-    line-height: 1.6;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    min-height: 100vh;
-    overflow-x: hidden;
-    background: linear-gradient(135deg, #0a0a2a 0%, #1a1a4a 50%, #0a0a2a 100%);
+    letter-spacing: 0.05em; /* Відстань між літерами */
+    line-height: 1.6; /* Міжрядковий інтервал */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Тінь тексту для кращої читабельності */
+    min-height: 100vh; /* Мінімальна висота - весь екран */
+    overflow-x: hidden; /* Приховує горизонтальну прокрутку */
+    background: linear-gradient(135deg, #0a0a2a 0%, #1a1a4a 50%, #0a0a2a 100%); /* Фоновий градієнт */
 }
 
 /*
-   ===== ФОН СТОРІНКИ =====
+   ФОН СТОРІНКИ - фіксоване зображення на весь екран
 */
 .background-container {
-    position: fixed;
+    position: fixed; /* Фіксоване позиціонування */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Позаду всього контенту */
     overflow: hidden;
 }
 
 .background-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Зображення заповнює весь контейнер */
     object-position: center;
-    filter: brightness(0.6) contrast(1.2) hue-rotate(200deg);
+    filter: brightness(0.6) contrast(1.2) hue-rotate(200deg); /* Фільтри для зображення */
 }
 
 .background-overlay {
@@ -96,17 +107,17 @@ body {
             rgba(0, 0, 0, 0.7) 0%,
             rgba(0, 102, 204, 0.3) 50%,
             rgba(0, 0, 0, 0.7) 100%
-    );
+    ); /* Градієнтний оверлей */
 }
 
 /*
-   ===== ГЕРОЙ СЕКЦІЯ =====
+   ГЕРОЙ СЕКЦІЯ - головний банер на початку сторінки
 */
 .hero-section {
-    min-height: 100vh;
+    min-height: 100vh; /* Займає всю висоту екрану */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Вертикальне вирівнювання по центру */
+    justify-content: center; /* Горизонтальне вирівнювання по центру */
     padding: 2rem;
     position: relative;
 }
@@ -114,7 +125,7 @@ body {
 .hero-content {
     text-align: center;
     max-width: 800px;
-    z-index: 2;
+    z-index: 2; /* Вище фону */
 }
 
 .hero-title {
@@ -122,9 +133,9 @@ body {
     font-size: 4rem;
     color: var(--light-blue);
     margin-bottom: 1rem;
-    text-shadow: 0 0 20px rgba(0, 153, 255, 0.7);
+    text-shadow: 0 0 20px rgba(0, 153, 255, 0.7); /* Ефект світіння */
     letter-spacing: 0.1em;
-    animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate; /* Анімація світіння */
 }
 
 .hero-subtitle {
@@ -141,7 +152,7 @@ body {
     line-height: 1.6;
     max-width: 600px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; /* Центрування */
 }
 
 .button--hero {
@@ -161,10 +172,11 @@ body {
 }
 
 .button--hero:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px) scale(1.05); /* Ефект підйому при наведенні */
     box-shadow: 0 0 30px rgba(0, 204, 102, 0.5);
 }
 
+/* Анімація світіння для заголовка */
 @keyframes glow {
     from {
         text-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
@@ -175,23 +187,23 @@ body {
 }
 
 /*
-   ===== ШАПКА САЙТУ =====
+   ШАПКА САЙТУ - навігаційна панель
 */
 .header {
-    position: fixed;
+    position: fixed; /* Фіксована позиція при прокрутці */
     top: 0;
     left: 0;
     width: 100%;
     height: var(--header-height);
-    z-index: 1000;
+    z-index: 1000; /* Найвищий z-index - поверх всього */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out; /* Анімація зникнення */
     background: linear-gradient(135deg,
     rgba(0, 10, 30, 0.98) 0%,
     rgba(0, 51, 102, 0.95) 50%,
     rgba(0, 10, 30, 0.98) 100%
     );
-    clip-path: polygon(
+    clip-path: polygon( /* Спеціальна форма шапки */
             0 0, 100% 0, 100% 85%,
             95% 90%, 90% 85%, 85% 90%, 80% 85%, 75% 90%,
             70% 85%, 65% 90%, 60% 85%, 55% 90%, 50% 85%,
@@ -199,12 +211,12 @@ body {
             20% 85%, 15% 90%, 10% 85%, 5% 90%, 0 85%
     );
     border-bottom: 2px solid var(--accent-blue);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /* Ефект розмиття фону */
     transform: translateY(0);
 }
 
 .header.hidden {
-    transform: translateY(-100%);
+    transform: translateY(-100%); /* Ховає шапку при прокрутці вниз */
 }
 
 .header__container {
@@ -214,11 +226,11 @@ body {
     padding: 0 3rem;
     height: 100%;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0 auto; /* Центрування */
 }
 
 .header__spacer {
-    width: 3.5rem;
+    width: 3.5rem; /* Пустий простір для симетрії */
 }
 
 .header__logo-link {
@@ -237,7 +249,7 @@ body {
 }
 
 .header__logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Ефект збільшення при наведенні */
     filter: drop-shadow(0 0 12px rgba(0, 153, 255, 0.8));
 }
 
@@ -247,7 +259,7 @@ body {
     align-items: center;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Точне центрування */
 }
 
 .header__link {
@@ -271,6 +283,7 @@ body {
     border: 1px solid rgba(0, 153, 255, 0.3);
 }
 
+/* Ефект блиску при наведенні на посилання */
 .header__link::before {
     content: '';
     position: absolute;
@@ -288,28 +301,28 @@ body {
 }
 
 .header__link:hover::before {
-    left: 100%;
+    left: 100%; /* Анімація блиску */
 }
 
 .header__link:hover {
     background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Ефект підйому */
     box-shadow: var(--glow-blue-hover);
     color: #ffffff;
 }
 
 .header__link.active {
     background: linear-gradient(135deg, var(--tech-green), var(--primary-blue));
-    box-shadow: 0 0 15px rgba(0, 204, 102, 0.5);
+    box-shadow: 0 0 15px rgba(0, 204, 102, 0.5); /* Підсвічування активної сторінки */
 }
 
 /*
-   ===== ОСНОВНИЙ КОНТЕНТ =====
+   ОСНОВНИЙ КОНТЕНТ
 */
 .main-content {
     width: 100%;
     margin: 0 auto;
-    padding-top: var(--header-height);
+    padding-top: var(--header-height); /* Відступ для фіксованої шапки */
     min-height: 100vh;
     position: relative;
     z-index: 1;
@@ -318,14 +331,14 @@ body {
 .windows-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    width: min(95%, 1400px);
+    gap: 2rem; /* Відступ між блоками */
+    width: min(95%, 1400px); /* Адаптивна ширина */
     margin: 0 auto;
     padding: 2rem 1rem;
 }
 
 /*
-   ===== СТИЛІ ДЛЯ ВСІХ ВІКОН =====
+   СТИЛІ ДЛЯ ВСІХ ВІКОН (інформаційних блоків)
 */
 .window {
     background: rgba(0, 0, 0, 0.75);
@@ -342,6 +355,7 @@ body {
     overflow: hidden;
 }
 
+/* Верхня лінія-акцент для кожного вікна */
 .window::before {
     content: '';
     position: absolute;
@@ -353,13 +367,13 @@ body {
 }
 
 .window:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Ефект підйому при наведенні */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
     border-color: rgba(0, 204, 102, 0.3);
 }
 
 /*
-   ===== ТИПОГРАФІКА =====
+   ТИПОГРАФІКА - стилі для тексту
 */
 .heading-secondary {
     font-family: 'Tech Font', monospace;
@@ -372,6 +386,7 @@ body {
     text-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
 }
 
+/* Підкреслення для заголовків */
 .heading-secondary::after {
     content: '';
     position: absolute;
@@ -385,7 +400,7 @@ body {
 }
 
 .heading-secondary:hover::after {
-    width: 100px;
+    width: 100px; /* Анімація підкреслення при наведенні */
 }
 
 .heading-tertiary {
@@ -406,11 +421,11 @@ body {
 }
 
 /*
-   ===== СТРУКТУРА ВІКОН =====
+   СТРУКТУРА ВІКОН - розташування елементів
 */
 .windows-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Дві колонки */
     gap: 2rem;
     width: 100%;
     margin-bottom: 2rem;
@@ -418,7 +433,7 @@ body {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Три колонки */
     gap: 1.5rem;
     margin-top: 1rem;
     width: 100%;
@@ -471,7 +486,7 @@ body {
     text-align: left;
 }
 
-/* Технології */
+/* Стилі для блоку технологій */
 .tech-stack {
     display: flex;
     flex-direction: column;
@@ -482,7 +497,7 @@ body {
 .tech-item {
     display: flex;
     gap: 0.5rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Перенесення на новий ряд */
     justify-content: center;
 }
 
@@ -503,14 +518,14 @@ body {
     box-shadow: 0 5px 15px rgba(0, 153, 255, 0.3);
 }
 
-/* Контакти */
+/* Стилі для контактної інформації */
 .contact-content {
     width: 100%;
 }
 
 .contact-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивна сітка */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -524,12 +539,12 @@ body {
 }
 
 /*
-   ===== ВІДЕО КОНТЕЙНЕР =====
+   ВІДЕО КОНТЕЙНЕР
 */
 .video-container {
     width: 100%;
     position: relative;
-    flex-grow: 1;
+    flex-grow: 1; /* Займає весь доступний простір */
     display: flex;
     flex-direction: column;
 }
@@ -550,7 +565,7 @@ body {
 }
 
 /*
-   ===== ТАБЛИЦЯ ПОДІЙ =====
+   ТАБЛИЦЯ ПОДІЙ
 */
 .table-container {
     width: 100%;
@@ -558,15 +573,15 @@ body {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    overflow-x: auto;
+    overflow-x: auto; /* Горизонтальна прокрутка на малих екранах */
 }
 
 .events-table {
     width: 100%;
-    border-collapse: separate;
+    border-collapse: separate; /* Розділені межі комірок */
     border-spacing: 0;
     font-size: 1rem;
-    min-width: 600px;
+    min-width: 600px; /* Мінімальна ширина для прокрутки */
 }
 
 .events-table th,
@@ -600,13 +615,13 @@ body {
 }
 
 .events-table tr:nth-child(even) {
-    background: rgba(0, 153, 255, 0.05);
+    background: rgba(0, 153, 255, 0.05); /* Зеброве розфарбування */
 }
 
 .events-table tr:hover {
     background: rgba(0, 153, 255, 0.15);
     cursor: pointer;
-    transform: scale(1.02);
+    transform: scale(1.02); /* Ефект збільшення при наведенні */
 }
 
 .events-table tr:hover td {
@@ -614,7 +629,7 @@ body {
 }
 
 /*
-   ===== КНОПКА ОПИТУВАННЯ =====
+   КНОПКА ОПИТУВАННЯ
 */
 .survey-toggle-section {
     text-align: center;
@@ -649,7 +664,7 @@ body {
 }
 
 /*
-   ===== СЕКЦІЯ ОПИТУВАННЯ =====
+   СЕКЦІЯ ОПИТУВАННЯ (форми)
 */
 .survey-section {
     background: rgba(0, 10, 30, 0.9);
@@ -657,7 +672,7 @@ body {
     border-radius: var(--border-radius);
     margin: 3rem auto;
     border: 1px solid rgba(0, 153, 255, 0.3);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px); /* Ефект розмиття */
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
@@ -677,6 +692,7 @@ body {
     display: block;
 }
 
+/* Анімація верхньої лінії */
 .survey-section::before {
     content: '';
     position: absolute;
@@ -759,8 +775,9 @@ body {
     letter-spacing: 0.05em;
 }
 
+/* Кастомний вигляд для select */
 .form-select {
-    appearance: none;
+    appearance: none; /* Прибирає стандартний вигляд */
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230099ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 1rem center;
@@ -785,7 +802,7 @@ body {
 }
 
 .form-select::-ms-expand {
-    display: none;
+    display: none; /* Приховує стрілку в IE */
 }
 
 .form-input:focus,
@@ -800,19 +817,19 @@ body {
 }
 
 .form-textarea {
-    resize: vertical;
+    resize: vertical; /* Дозволяє змінювати розмір тільки по вертикалі */
     min-height: 120px;
 }
 
 .rating-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптивна сітка */
     gap: 0.8rem;
     margin-top: 1rem;
 }
 
 .rating-group input[type="radio"] {
-    display: none;
+    display: none; /* Приховує стандартні радіо-кнопки */
 }
 
 .rating-label {
@@ -887,9 +904,10 @@ body {
 }
 
 .checkbox-label input[type="checkbox"] {
-    display: none;
+    display: none; /* Приховує стандартні чекбокси */
 }
 
+/* Кастомний чекбокс */
 .checkmark {
     display: inline-block;
     width: 20px;
@@ -972,7 +990,7 @@ body {
 }
 
 /*
-   ===== ПІДВАЛ САЙТУ =====
+   ПІДВАЛ САЙТУ
 */
 .footer {
     background: var(--footer-bg);
@@ -1005,20 +1023,22 @@ body {
 }
 
 /*
-   ===== АДАПТИВНІСТЬ =====
+   АДАПТИВНІСТЬ - медіа-запити для різних розмірів екранів
 */
+
+/* Планшети та маленькі ноутбуки */
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 3rem;
     }
 
     .windows-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Одна колонка замість двох */
         gap: 1.5rem;
     }
 
     .features-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Дві колонки замість трьох */
     }
 
     .header__nav {
@@ -1039,7 +1059,7 @@ body {
 
     .header__logo {
         margin-left: 0;
-        order: -1;
+        order: -1; /* Логотип першим */
     }
 
     .survey-section {
@@ -1056,6 +1076,7 @@ body {
     }
 }
 
+/* Планшети та великі телефони */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -1072,7 +1093,7 @@ body {
     .header {
         height: auto;
         min-height: 80px;
-        clip-path: none;
+        clip-path: none; /* Прибираємо спеціальну форму */
     }
 
     .header__container {
@@ -1087,7 +1108,7 @@ body {
 
     .header__nav {
         gap: 0.8rem;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Перенесення пунктів меню */
         justify-content: center;
     }
 
@@ -1124,7 +1145,7 @@ body {
     }
 
     .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Одна колонка */
         gap: 1rem;
     }
 
@@ -1146,7 +1167,7 @@ body {
     }
 
     .form-select {
-        font-size: 16px;
+        font-size: 16px; /* Запобігає масштабуванню в iOS */
         padding: 1.2rem 1.2rem;
     }
 
@@ -1163,6 +1184,7 @@ body {
     }
 }
 
+/* Мобільні телефони */
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
@@ -1257,7 +1279,7 @@ body {
     transform: scale(1.02);
 }
 
-/* Анімація спінера */
+/* Анімація спінера для завантаження */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
