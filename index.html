@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroneTech Lab - Студія програмування та створення дронів</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!-- Фон сторінки -->
+<div class="background-container">
+    <img src="https://zefirka.club/wallpapers/uploads/posts/2023-02/thumbs/1676733780_zefirka-club-p-blagorodnii-fon-10.jpg" alt="Drone Technology Background" class="background-image">
+    <div class="background-overlay"></div>
+</div>
+
+<!-- Шапка сайту -->
+<header class="header" id="mainHeader">
+    <div class="header__container">
+        <a href="https://vntu.edu.ua/uk/information-for-enrollee/osvitnya-programa-komp-yuterni-nauki-bakalavr-1360.html" class="header__logo-link" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYxiW_WqIFLhCIWAuAt2JvWGQVvh40aP0JA&s"
+                 alt="DroneTech Lab Logo"
+                 class="header__logo">
+        </a>
+        <nav class="header__nav">
+            <a href="#home" class="header__link active">Головна</a>
+            <a href="#about" class="header__link">Про нас</a>
+            <a href="#features" class="header__link">Напрямки</a>
+            <a href="#courses" class="header__link">Курси</a>
+            <a href="#contact" class="header__link">Контакти</a>
+        </nav>
+        <div class="header__spacer"></div>
+    </div>
+</header>
+
+<!-- Основний контент -->
+<main class="main-content">
+    <!-- Герой секція -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">DroneTech Lab</h1>
+            <p class="hero-subtitle">Студія програмування та створення дронів</p>
+            <p class="hero-description">
+                Інноваційна лабораторія, де технології зустрічаються з креативністю.
+                Створюємо майбутнє разом з вами!
+            </p>
+            <button class="button button--hero" id="heroButton">
+                Почати навчання
+            </button>
+        </div>
+    </section>
+
+    <div class="windows-container">
+        <!-- Секція Про нас -->
+        <section class="window text-window" id="about">
+            <h2 class="heading-secondary">Про DroneTech Lab</h2>
+            <div class="text-content">
+                <p class="paragraph">
+                    Ласкаво просимо до нашої лабораторії програмування та створення дронів!
+                    Ми - команда ентузіастів, які об'єднали любов до технологій, авіації та програмування.
+                </p>
+                <p class="paragraph">
+                    У нашій лабораторії ми займаємося повним циклом розробки безпілотних літальних апаратів -
+                    від проектування механічних частин до написання складного програмного забезпечення для
+                    автономних польотів.
+                </p>
+                <p class="paragraph">
+                    Навчаємо майбутніх інженерів, проводимо дослідження та створюємо інноваційні рішення
+                    у сфері дронотехніки. Співпрацюємо з ВНТУ та іншими технічними університетами.
+                </p>
+            </div>
+        </section>
+
+        <!-- Особливості -->
+        <section class="window features-window" id="features">
+            <h2 class="heading-secondary">Напрямки діяльності</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Проектування дронів</h3>
+                    <p class="feature-card__description">Розробка та конструювання безпілотних літальних апаратів різного призначення</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Програмування ПІД-регуляторів</h3>
+                    <p class="feature-card__description">Налаштування систем стабілізації та управління польотом</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Комп'ютерний зір</h3>
+                    <p class="feature-card__description">Розпізнавання об'єктів, навігація та автономні польоти</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Тестування та оптимізація</h3>
+                    <p class="feature-card__description">Польотні випробування та покращення характеристик дронів</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Авіоніка та датчики</h3>
+                    <p class="feature-card__description">Робота з GPS, IMU, барометрами та іншими сенсорами</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card__title">Бездротові технології</h3>
+                    <p class="feature-card__description">Налаштування зв'язку, телеметрії та дистанційного керування</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Другий ряд: Відео та Деталі -->
+        <div class="windows-row">
+            <section class="window video-window">
+                <h2 class="heading-secondary">Наші роботи</h2>
+                <div class="video-container">
+                    <iframe
+                            class="video-iframe"
+                            src="https://www.youtube.com/embed/jWVc1dFFMHc"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="window tech-window">
+                <h2 class="heading-secondary">Технології</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-badge">Arduino</span>
+                        <span class="tech-badge">Raspberry Pi</span>
+                        <span class="tech-badge">ESP32</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">C++</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">ROS</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">PyTorch</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-badge">3D Printing</span>
+                        <span class="tech-badge">CAD</span>
+                        <span class="tech-badge">SolidWorks</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Таблиця курсів -->
+        <section class="window table-window" id="courses">
+            <h2 class="heading-secondary">Майбутні заходи та курси</h2>
+            <div class="table-container">
+                <table class="events-table">
+                    <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Подія</th>
+                        <th>Опис</th>
+                        <th>Рівень складності</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>15.12.2024</td>
+                        <td>Майстер-клас: Основи Arduino</td>
+                        <td>Базовий курс програмування мікроконтролерів для дронів</td>
+                        <td>Початковий</td>
+                    </tr>
+                    <tr>
+                        <td>22.12.2024</td>
+                        <td>Воркшоп: ПІД-регулятори</td>
+                        <td>Практичне налаштування систем стабілізації дронів</td>
+                        <td>Середній</td>
+                    </tr>
+                    <tr>
+                        <td>05.01.2025</td>
+                        <td>Курс: Комп'ютерний зір для дронів</td>
+                        <td>OpenCV та машинне навчання для автономних польотів</td>
+                        <td>Просунутий</td>
+                    </tr>
+                    <tr>
+                        <td>20.01.2025</td>
+                        <td>Змагання дронів</td>
+                        <td>Змагання з автономної навігації та виконання завдань</td>
+                        <td>Всі рівні</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Кнопка запису -->
+        <div class="survey-toggle-section">
+            <button class="button button--survey-toggle" id="surveyToggle">
+                Записатися на курс
+            </button>
+        </div>
+
+        <!-- Секція форми -->
+        <section class="survey-section" id="surveySection">
+            <div class="survey-container">
+                <div class="survey-description">
+                    <h2 class="heading-secondary">Заявка на навчання</h2>
+                    <p class="paragraph">Заповніть форму, щоб записатися на курси або отримати консультацію!</p>
+                </div>
+
+                <form class="survey-form" id="surveyForm" action="https://formspree.io/f/xqayoglo" method="POST">
+                    <div class="form-section">
+                        <h3 class="heading-tertiary">Особиста інформація</h3>
+
+                        <div class="form-group">
+                            <label class="form-label" for="playerName">Повне ім'я:</label>
+                            <input type="text" id="playerName" name="playerName" class="form-input" placeholder="Введіть ваше повне ім'я" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="playerEmail">Email адреса:</label>
+                            <input type="email" id="playerEmail" name="playerEmail" class="form-input" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="playerAge">Вік:</label>
+                            <select id="playerAge" name="playerAge" class="form-select" required>
+                                <option value="">Оберіть ваш вік</option>
+                                <option value="under-18">До 18 років</option>
+                                <option value="18-25">18-25 років</option>
+                                <option value="26-35">26-35 років</option>
+                                <option value="36-45">36-45 років</option>
+                                <option value="over-45">Понад 45 років</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="heading-tertiary">Інтереси та досвід</h3>
+
+                        <div class="form-group">
+                            <label class="form-label">Рівень досвіду з дронами:</label>
+                            <div class="rating-group">
+                                <input type="radio" id="rating5" name="gameRating" value="5" required>
+                                <label for="rating5" class="rating-label">
+                                    <span class="rating-stars">★★★★★</span>
+                                    <span class="rating-text">Експерт</span>
+                                </label>
+
+                                <input type="radio" id="rating4" name="gameRating" value="4">
+                                <label for="rating4" class="rating-label">
+                                    <span class="rating-stars">★★★★</span>
+                                    <span class="rating-text">Досвідчений</span>
+                                </label>
+
+                                <input type="radio" id="rating3" name="gameRating" value="3">
+                                <label for="rating3" class="rating-label">
+                                    <span class="rating-stars">★★★</span>
+                                    <span class="rating-text">Середній</span>
+                                </label>
+
+                                <input type="radio" id="rating2" name="gameRating" value="2">
+                                <label for="rating2" class="rating-label">
+                                    <span class="rating-stars">★★</span>
+                                    <span class="rating-text">Початківець</span>
+                                </label>
+
+                                <input type="radio" id="rating1" name="gameRating" value="1">
+                                <label for="rating1" class="rating-label">
+                                    <span class="rating-stars">★</span>
+                                    <span class="rating-text">Новачок</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Цікаві напрямки (оберіть до 3):</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="favoriteAspects[]" value="design">
+                                    <span class="checkmark"></span>
+                                    Проектування та 3D-моделювання
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="favoriteAspects[]" value="programming">
+                                    <span class="checkmark"></span>
+                                    Програмування мікроконтролерів
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="favoriteAspects[]" value="vision">
+                                    <span class="checkmark"></span>
+                                    Комп'ютерний зір та AI
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="favoriteAspects[]" value="electronics">
+                                    <span class="checkmark"></span>
+                                    Електроніка та пайка
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="favoriteAspects[]" value="testing">
+                                    <span class="checkmark"></span>
+                                    Тестування та польоти
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="heading-tertiary">Додаткова інформація</h3>
+
+                        <div class="form-group">
+                            <label class="form-label" for="playtime">Бажаний курс:</label>
+                            <select id="playtime" name="playtime" class="form-select" required>
+                                <option value="">Оберіть курс</option>
+                                <option value="arduino-basics">Основи Arduino для дронів</option>
+                                <option value="pid-control">ПІД-регулятори та стабілізація</option>
+                                <option value="computer-vision">Комп'ютерний зір з OpenCV</option>
+                                <option value="autonomous-flight">Автономні польоти</option>
+                                <option value="drone-building">Повний цикл збірки дрона</option>
+                                <option value="consultation">Консультація</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="playerComments">Ваші цілі та питання:</label>
+                            <textarea id="playerComments" name="playerComments" class="form-textarea" rows="5" placeholder="Розкажіть про ваші цілі, досвід або задайте питання..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Приховані поля для Formspree -->
+                    <input type="hidden" name="_subject" value="Нова заявка на курс з дронів">
+                    <input type="hidden" name="_format" value="plain">
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <div class="form-actions">
+                        <button type="submit" class="button button--submit">
+                            <span class="button-text">Надіслати заявку</span>
+                        </button>
+                        <button type="reset" class="button button--reset">
+                            <span class="button-text">Очистити форму</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Контактна секція -->
+        <section class="window contact-window" id="contact">
+            <h2 class="heading-secondary">Контакти</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3 class="heading-tertiary">Адреса</h3>
+                        <p class="paragraph">м. Вінниця, вул. Хмельницьке шосе, 95</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="heading-tertiary">Телефони</h3>
+                        <p class="paragraph"> +380 (66) 857 62 94</p>
+                        +380 (98) 506 54 02
+                        +380 (68) 336 79 22
+                        +380 (66) 818 72 78
+
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="heading-tertiary">Email</h3>
+                        <p class="paragraph">info@dronetech-lab.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="heading-tertiary">Графік роботи</h3>
+                        <p class="paragraph">Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 15:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Підвал -->
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-text">&copy; 2024 DroneTech Lab. Всі права захищені.</p>
+        <p class="footer-text">Студія програмування та створення дронів</p>
+        <p class="footer-text">Співпраця з <a href="https://vntu.edu.ua" target="_blank" style="color: var(--light-blue);">ВНТУ</a></p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
