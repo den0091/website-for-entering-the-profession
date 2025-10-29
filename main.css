@@ -10,13 +10,13 @@
     --light-blue: #bbddff;          /* Світлий синій для тексту */
     --tech-green: #00cc66;          /* Технологічний зелений для акцентів */
     --text-color: #f2f2f2;          /* Основний колір тексту */
-    
+
     /* Кольори фонів */
     --dark-bg: rgba(0, 0, 0, 0.85);          /* Темний фон */
     --content-bg: rgba(0, 0, 0, 0.7);        /* Фон контенту */
     --table-bg: rgba(20, 20, 20, 0.9);       /* Фон таблиць */
     --footer-bg: rgba(10, 10, 10, 0.9);      /* Фон підвалу */
-    
+
     /* Тіні та ефекти */
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.7);     /* Маленька тінь */
     --shadow-md: 0 0 15px rgba(0, 0, 0, 0.5);       /* Середня тінь */
@@ -24,12 +24,12 @@
     --glow-blue: 0px 0px 5px rgba(0, 102, 204, 0.4);        /* Світіння синього */
     --glow-blue-hover: 0px 0px 8px rgba(0, 153, 255, 0.6);  /* Світіння при наведенні */
     --glow-green: 0px 0px 5px rgba(0, 204, 102, 0.4);      /* Світіння зеленого */
-    
+
     /* Розміри та відступи */
     --border-radius: 15px;          /* Радіус закруглення кутів */
     --header-height: 110px;         /* Висота шапки */
     --content-width: 85%;           /* Ширина контенту */
-    
+
     /* Анімації */
     --transition: all 0.3s ease;            /* Стандартна анімація */
     --transition-slow: all 0.4s ease;       /* Повільна анімація */
@@ -1153,6 +1153,20 @@ body {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+    /* Стилі для списку телефонів у контактах */
+    .phones-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .phones-list .paragraph {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+        color: var(--light-blue);
+    }
+
+    /* Решта CSS залишається без змін */
 
     .rating-group {
         grid-template-columns: 1fr;
